@@ -79,25 +79,18 @@ Once the containers are up and running, you can access the application by naviga
   sudo apt-get update
 ```
 2. Clone the project
-
 ```bash
   git clone https://github.com/ajayhp07/Nodejs_project.git
 ```
-
 3. Go to the project directory
-
 ```bash
   cd <project_directory>
 ```
-
 4. Build Docker Image:
-
 ```bash
   docker build -t <image-name> .
 ```
-
 5. Start the server
-
 ```bash
   docker run -p 3000:3000 -d <image-name> 
 ```
@@ -215,8 +208,15 @@ stage("ContinousDownload")
 
 2. Docker Socket Connection Error: Jenkins might fail to connect to the Docker daemon socket (/var/run/docker.sock). This could result in errors such as "connection refused" or "cannot connect to Docker daemon" when Jenkins tries to interact with Docker.
 
-3. To resolve this issue [it is used to add the user jenkins to the docker group. ]
-
+3. Go to the jekins server
+   ```bash
+  cd /var/lib/jenkins/workspace
+  ```
+4. Go inside the workspace
+```bash
+  cd <workspace-name> 
+```  
+5. And add the user jenkins to the docker group.
 ```bash
   sudo usermod -aG docker jenkins 
 ```
