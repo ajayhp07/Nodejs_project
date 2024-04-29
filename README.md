@@ -1,4 +1,3 @@
-
 # CI/CD Pipeline for Node.js Application
 
 This project implements a Continuous Integration/Continuous Deployment (CI/CD) pipeline for a web application using GitHub Actions. The pipeline automates the process of testing, building, and deploying the application, ensuring a streamlined development workflow.
@@ -209,9 +208,9 @@ stage("ContinousDownload")
 2. Docker Socket Connection Error: Jenkins might fail to connect to the Docker daemon socket (/var/run/docker.sock). This could result in errors such as "connection refused" or "cannot connect to Docker daemon" when Jenkins tries to interact with Docker.
 
 3. Go to the jekins server
-   ```bash
+```bash
   cd /var/lib/jenkins/workspace
-  ```
+```
 4. Go inside the workspace
 ```bash
   cd <workspace-name> 
